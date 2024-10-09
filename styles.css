@@ -1,8 +1,10 @@
 /* Style général du corps de la page */
 body {
-    background-color: #f3f4ff; /* Un doux bleu pastel pour l'arrière-plan */
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Une police amusante et créative */
-    color: #333; /* Couleur de texte par défaut */
+    background-image: url('background.jpg'); /* Image de fond féérique */
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Dancing Script', cursive; /* Police manuscrite élégante */
+    color: #ffffff; /* Couleur du texte blanc pour contraster avec le fond */
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,87 +12,132 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Effet d'ombre pour rendre le texte plus visible */
 }
 
 /* Style pour le titre principal (h1) */
 h1 {
-    color: #ff69b4; /* Un rose magique */
+    color: #ffb6c1; /* Rose féérique */
+    font-size: 4em;
     text-align: center;
-    font-size: 3em;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Effet d'ombre subtile pour donner une sensation magique */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Ombre pour effet de profondeur */
     margin-top: 20px;
+    animation: glow 2s infinite alternate; /* Animation de lueur */
+}
+
+/* Animation de lueur pour le titre */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ffb6c1, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff1493;
+    }
+    100% {
+        text-shadow: 0 0 20px #ffb6c1, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff1493;
+    }
 }
 
 /* Style pour les sous-titres (h2) */
 h2 {
-    color: #87cefa; /* Bleu pastel doux */
+    color: #add8e6; /* Bleu doux féérique */
+    font-size: 3em;
     text-align: center;
-    font-size: 2em;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    margin: 40px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Effet d'ombre douce */
+    animation: fadeIn 3s ease-in-out; /* Animation d'apparition en fondu */
+}
+
+/* Animation pour faire apparaître en fondu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Style pour les paragraphes */
 p {
-    color: #555; /* Gris doux pour les paragraphes */
-    font-size: 1.2em;
-    line-height: 1.8;
+    color: #ffffff; /* Blanc pour contraster avec le fond */
+    font-size: 1.5em;
     text-align: center;
-    max-width: 800px;
+    line-height: 1.8;
     margin: 20px auto;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.5); /* Fond légèrement sombre pour rendre le texte lisible */
+    padding: 20px;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Légère ombre pour du relief */
 }
 
-/* Effet de lumière magique autour des images */
+/* Style des images */
 img {
     display: block;
-    margin: 20px auto;
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 30px auto;
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre prononcée */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
+/* Animation de zoom et de lueur au survol des images */
 img:hover {
-    transform: scale(1.05); /* Zoom léger au survol */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-/* Style pour les sections du contenu */
-section {
-    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc avec un peu de transparence */
-    border: 2px solid #87cefa; /* Bordure bleu pastel */
-    padding: 20px;
-    border-radius: 15px; /* Bords arrondis pour un effet doux */
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour donner du relief */
+    transform: scale(1.1); /* Zoom au survol */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6); /* Ombre accentuée au survol */
 }
 
 /* Style pour les boutons magiques */
 button {
-    background-color: #ffb6c1; /* Rose clair */
+    background-color: #ff69b4; /* Rose éclatant */
     color: white;
     border: none;
     padding: 15px 30px;
-    text-align: center;
-    font-size: 1.2em;
-    border-radius: 30px; /* Forme arrondie pour donner un côté amusant et doux */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.5em;
+    border-radius: 30px; /* Boutons arrondis */
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+    animation: pulse 2s infinite; /* Animation de pulsation magique */
+}
+
+/* Animation de pulsation des boutons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #ff69b4, 0 0 30px #ff1493;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+    }
 }
 
 button:hover {
-    background-color: #ff69b4; /* Changement de couleur au survol */
-    transform: scale(1.1); /* Légère animation de zoom */
+    background-color: #ff1493; /* Changement de couleur au survol */
+    transform: scale(1.2); /* Zoom au survol */
 }
 
-/* Style pour le footer (pied de page) */
+/* Style pour les sections de contenu */
+section {
+    background-color: rgba(255, 255, 255, 0.1); /* Légère transparence */
+    border: 2px solid #add8e6; /* Bordure bleu pastel */
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+    backdrop-filter: blur(5px); /* Flou pour un effet féérique */
+}
+
+/* Footer féérique */
 footer {
-    background-color: #87cefa; /* Fond bleu doux */
-    padding: 10px;
+    background-color: #ff69b4;
+    padding: 20px;
     text-align: center;
     color: white;
-    font-size: 1em;
+    font-size: 1.2em;
     position: fixed;
     width: 100%;
     bottom: 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
 }
