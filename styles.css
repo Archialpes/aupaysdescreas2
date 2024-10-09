@@ -115,3 +115,63 @@ button:hover {
     background-color: #ff1493;
     transform: scale(1.1);
 }
+/* Style général du corps de la page */
+body {
+    background: linear-gradient(120deg, #fceff9, #e0f7fa); /* Dégradé doux */
+    font-family: 'Dancing Script', cursive; /* Police élégante */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Style pour le texte principal */
+h1, h2, p {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour améliorer la lisibilité */
+}
+
+/* Pied de page avec texte clair et lisible */
+footer {
+    background-color: rgba(0, 0, 0, 0.6); /* Fond noir semi-transparent */
+    padding: 20px;
+    text-align: center;
+    color: white; /* Texte en blanc pour contraste */
+    font-size: 1.2em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Ombre pour séparation nette */
+}
+
+/* Style pour le texte du footer */
+footer p {
+    color: #ffffff; /* Texte blanc */
+    font-size: 1.3em; /* Taille de police augmentée pour meilleure lisibilité */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Ajout d'ombre pour rendre le texte plus visible */
+}
+
+/* Style des liens du footer */
+footer a {
+    color: #ff69b4; /* Couleur vive pour les liens */
+    text-decoration: none; /* Enlever le soulignement */
+    font-weight: bold; /* Mettre en gras */
+}
+
+footer a:hover {
+    color: #ffffff; /* Changement de couleur au survol */
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Pour s'assurer que le footer est toujours en bas de la page */
+html, body {
+    height: 100%;
+}
+
+.container {
+    flex: 1;
+}
