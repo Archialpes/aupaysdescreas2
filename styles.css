@@ -1,6 +1,6 @@
 /* Style général du corps de la page */
 body {
-    background-image: url('background.jpg'); /* Image de fond féérique */
+    background-image: url('image_background.jpg'); /* Image de fond féérique */
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Dancing Script', cursive; /* Police manuscrite élégante */
