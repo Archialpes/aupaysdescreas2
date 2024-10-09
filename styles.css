@@ -1,143 +1,117 @@
-/* Style général du corps de la page */
+/* Style général du corps de la page avec un fond féérique */
 body {
-    background-image: url('image_background.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Dancing Script', cursive; /* Police manuscrite élégante */
-    color: #ffffff; /* Couleur du texte blanc pour contraster avec le fond */
+    background: linear-gradient(120deg, #fceff9, #e0f7fa); /* Dégradé de couleurs douces */
+    background-size: cover; /* Couvre toute la page */
+    font-family: 'Dancing Script', cursive; /* Une police élégante et créative */
+    color: #ffffff; /* Couleur du texte */
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Effet d'ombre pour rendre le texte plus visible */
+    position: relative;
+    overflow: hidden;
 }
 
-/* Style pour le titre principal (h1) */
-h1 {
-    color: #ffb6c1; /* Rose féérique */
-    font-size: 4em;
+/* Ajouter des étoiles animées pour un effet magique */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image_background.jpg'); /* Image d'étoiles ou points lumineux */
+    background-size: contain;
+    opacity: 0.7;
+    animation: moveStars 30s linear infinite;
+    z-index: 1;
+}
+
+@keyframes moveStars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* Pour les sections du contenu */
+section {
+    background: rgba(255, 255, 255, 0.2); /* Transparence féérique */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    backdrop-filter: blur(10px); /* Effet de flou */
+    z-index: 2; /* Placer les sections au-dessus des étoiles */
+    position: relative;
     text-align: center;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Ombre pour effet de profondeur */
-    margin-top: 20px;
-    animation: glow 2s infinite alternate; /* Animation de lueur */
+    color: #333;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet flottant */
+}
+
+/* Titre principal avec effet lumineux */
+h1 {
+    font-size: 4em;
+    color: #ff69b4;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 182, 193, 0.6);
+    z-index: 2;
+    animation: glow 2s infinite alternate;
 }
 
 /* Animation de lueur pour le titre */
 @keyframes glow {
     0% {
-        text-shadow: 0 0 10px #ffb6c1, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff1493;
+        text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 182, 193, 0.4);
     }
     100% {
-        text-shadow: 0 0 20px #ffb6c1, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff1493;
-    }
-}
-
-/* Style pour les sous-titres (h2) */
-h2 {
-    color: #add8e6; /* Bleu doux féérique */
-    font-size: 3em;
-    text-align: center;
-    margin: 40px 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Effet d'ombre douce */
-    animation: fadeIn 3s ease-in-out; /* Animation d'apparition en fondu */
-}
-
-/* Animation pour faire apparaître en fondu */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 182, 193, 1);
     }
 }
 
 /* Style pour les paragraphes */
 p {
-    color: #ffffff; /* Blanc pour contraster avec le fond */
     font-size: 1.5em;
-    text-align: center;
-    line-height: 1.8;
-    margin: 20px auto;
-    max-width: 800px;
-    background: rgba(0, 0, 0, 0.5); /* Fond légèrement sombre pour rendre le texte lisible */
-    padding: 20px;
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Légère ombre pour du relief */
+    color: #ffffff;
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Style des images */
-img {
-    display: block;
-    margin: 30px auto;
-    border-radius: 15px; /* Coins arrondis */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre prononcée */
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-}
-
-/* Animation de zoom et de lueur au survol des images */
-img:hover {
-    transform: scale(1.1); /* Zoom au survol */
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6); /* Ombre accentuée au survol */
-}
-
-/* Style pour les boutons magiques */
+/* Bouton magique avec effet lumineux */
 button {
-    background-color: #ff69b4; /* Rose éclatant */
+    background-color: #ff69b4;
     color: white;
     border: none;
     padding: 15px 30px;
     font-size: 1.5em;
-    border-radius: 30px; /* Boutons arrondis */
+    border-radius: 30px;
     cursor: pointer;
+    z-index: 2;
+    position: relative;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 30px;
-    animation: pulse 2s infinite; /* Animation de pulsation magique */
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5), 0 0 40px rgba(255, 105, 180, 0.5);
 }
 
-/* Animation de pulsation des boutons */
 @keyframes pulse {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+        box-shadow: 0 0 20px rgba(255, 105, 180, 0.5), 0 0 40px rgba(255, 105, 180, 0.7);
     }
     50% {
         transform: scale(1.05);
-        box-shadow: 0 0 20px #ff69b4, 0 0 30px #ff1493;
+        box-shadow: 0 0 30px rgba(255, 105, 180, 0.7), 0 0 50px rgba(255, 105, 180, 0.9);
     }
     100% {
         transform: scale(1);
-        box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+        box-shadow: 0 0 20px rgba(255, 105, 180, 0.5), 0 0 40px rgba(255, 105, 180, 0.7);
     }
 }
 
 button:hover {
-    background-color: #ff1493; /* Changement de couleur au survol */
-    transform: scale(1.2); /* Zoom au survol */
-}
-
-/* Style pour les sections de contenu */
-section {
-    background-color: rgba(255, 255, 255, 0.1); /* Légère transparence */
-    border: 2px solid #add8e6; /* Bordure bleu pastel */
-    padding: 20px;
-    border-radius: 15px;
-    margin: 20px;
-    backdrop-filter: blur(5px); /* Flou pour un effet féérique */
-}
-
-/* Footer féérique */
-footer {
-    background-color: #ff69b4;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    font-size: 1.2em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+    background-color: #ff1493;
+    transform: scale(1.1);
 }
