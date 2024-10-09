@@ -1,86 +1,131 @@
-/* Style général du corps de la page avec un fond féérique */
+/* Style général du corps de la page */
 body {
-    background: linear-gradient(120deg, #fceff9, #e0f7fa); /* Dégradé de couleurs douces */
-    background-size: cover; /* Couvre toute la page */
-    font-family: 'Dancing Script', cursive; /* Une police élégante et créative */
-    color: #ffffff; /* Couleur du texte */
+    font-family: 'Caveat', cursive; /* Police manuscrite originale et créative */
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    color: #ffffff; /* Texte en blanc pour assurer une bonne visibilité */
+    background: linear-gradient(120deg, #e0f7fa, #fceff9); /* Dégradé doux */
+    overflow: hidden; /* Masquer les éléments qui dépassent */
     position: relative;
-    overflow: hidden;
+    height: 100vh;
 }
 
-/* Ajouter des étoiles animées pour un effet magique */
+/* Ajouter un fond d'écran animé (particules) */
+@keyframes moveParticles {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+/* Particules en arrière-plan */
 body::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url('image_background.jpg'); /* Image d'étoiles ou points lumineux */
-    background-size: contain;
-    opacity: 0.7;
-    animation: moveStars 30s linear infinite;
-    z-index: 1;
+    height: 200%;
+    background-image: url('image_background.jpg'); /* Image de particules légères ou étoiles */
+    opacity: 0.3;
+    animation: moveParticles 20s linear infinite;
+    z-index: -1; /* Particules derrière le contenu */
+    background-size: cover;
 }
 
-@keyframes moveStars {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
-}
-
-/* Pour les sections du contenu */
-section {
-    background: rgba(255, 255, 255, 0.2); /* Transparence féérique */
-    border-radius: 15px;
-    padding: 20px;
-    margin: 20px;
-    backdrop-filter: blur(10px); /* Effet de flou */
-    z-index: 2; /* Placer les sections au-dessus des étoiles */
-    position: relative;
-    text-align: center;
-    color: #333;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet flottant */
-}
-
-/* Titre principal avec effet lumineux */
+/* Style pour le titre principal (h1) avec animation de lueur */
 h1 {
     font-size: 4em;
-    color: #ff69b4;
-    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 182, 193, 0.6);
-    z-index: 2;
+    color: #ff69b4; /* Rose doux pour un effet féérique */
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.8), 0 0 20px rgba(255, 105, 180, 0.6);
     animation: glow 2s infinite alternate;
 }
 
 /* Animation de lueur pour le titre */
 @keyframes glow {
     0% {
-        text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 182, 193, 0.4);
+        text-shadow: 0 0 5px rgba(255, 105, 180, 0.4), 0 0 15px rgba(255, 105, 180, 0.3);
     }
     100% {
-        text-shadow: 2px 2px 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 182, 193, 1);
+        text-shadow: 0 0 15px rgba(255, 105, 180, 0.8), 0 0 25px rgba(255, 105, 180, 0.6);
+    }
+}
+
+/* Style pour les sous-titres */
+h2 {
+    font-size: 2.5em;
+    color: #add8e6; /* Bleu pastel doux */
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Animation d'apparition en fondu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
 /* Style pour les paragraphes */
 p {
     font-size: 1.5em;
-    color: #ffffff;
-    z-index: 2;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond sombre semi-transparent pour lisibilité */
+    padding: 20px;
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: slideIn 2s ease-out;
 }
 
-/* Bouton magique avec effet lumineux */
+/* Animation de glissement pour les paragraphes */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Style pour les images */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: float 6s ease-in-out infinite; /* Animation de flottement pour les images */
+}
+
+/* Animation de flottement */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+img:hover {
+    transform: scale(1.1); /* Zoom au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Style pour les boutons magiques */
 button {
     background-color: #ff69b4;
     color: white;
@@ -89,13 +134,12 @@ button {
     font-size: 1.5em;
     border-radius: 30px;
     cursor: pointer;
-    z-index: 2;
-    position: relative;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
     animation: pulse 2s infinite;
-    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5), 0 0 40px rgba(255, 105, 180, 0.5);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5), 0 0 40px rgba(255, 105, 180, 0.7);
 }
 
+/* Animation de pulsation pour les boutons */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -113,5 +157,5 @@ button {
 
 button:hover {
     background-color: #ff1493;
-    transform: scale(1.1);
+    transform: scale(1.1); /* Zoom au survol */
 }
