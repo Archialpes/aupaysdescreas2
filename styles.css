@@ -1,83 +1,96 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2022.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; color: #1a1a1a; -webkit-text-stroke: #1a1a1a}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; color: #1a1a1a; -webkit-text-stroke: #1a1a1a; min-height: 15.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica; color: #1a1a1a; -webkit-text-stroke: #1a1a1a; min-height: 17.0px}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Helvetica; color: #1a1a1a; -webkit-text-stroke: #1a1a1a; min-height: 19.0px}
-    span.s1 {font-kerning: none; background-color: #ffffff}
-    span.s2 {font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">body {</span></p>
-<p class="p1"><span class="s1">Â  Â  font-family: Arial, sans-serif;</span></p>
-<p class="p1"><span class="s1">Â  Â  margin: 0;</span></p>
-<p class="p1"><span class="s1">Â  Â  padding: 0;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">header {</span></p>
-<p class="p1"><span class="s1">Â  Â  background-color: #f4c2c2;</span></p>
-<p class="p1"><span class="s1">Â  Â  padding: 10px 20px;</span></p>
-<p class="p1"><span class="s1">Â  Â  display: flex;</span></p>
-<p class="p1"><span class="s1">Â  Â  justify-content: space-between;</span></p>
-<p class="p1"><span class="s1">Â  Â  align-items: center;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">nav ul {</span></p>
-<p class="p1"><span class="s1">Â  Â  list-style: none;</span></p>
-<p class="p1"><span class="s1">Â  Â  display: flex;</span></p>
-<p class="p1"><span class="s1">Â  Â  gap: 15px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">nav a {</span></p>
-<p class="p1"><span class="s1">Â  Â  text-decoration: none;</span></p>
-<p class="p1"><span class="s1">Â  Â  color: #333;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">.hero {</span></p>
-<p class="p1"><span class="s1">Â  Â  background: url('image_background.jpg') no-repeat center center/cover; /* Remplacer par une image */</span></p>
-<p class="p1"><span class="s1">Â  Â  color: white;</span></p>
-<p class="p1"><span class="s1">Â  Â  text-align: center;</span></p>
-<p class="p1"><span class="s1">Â  Â  padding: 60px 20px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">h1, h2 {</span></p>
-<p class="p1"><span class="s1">Â  Â  margin: 20px 0;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">section {</span></p>
-<p class="p1"><span class="s1">Â  Â  padding: 20px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">table {</span></p>
-<p class="p1"><span class="s1">Â  Â  width: 100%;</span></p>
-<p class="p1"><span class="s1">Â  Â  border-collapse: collapse;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">th, td {</span></p>
-<p class="p1"><span class="s1">Â  Â  border: 1px solid #ddd;</span></p>
-<p class="p1"><span class="s1">Â  Â  padding: 10px;</span></p>
-<p class="p1"><span class="s1">Â  Â  text-align: left;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p1"><span class="s1">footer {</span></p>
-<p class="p1"><span class="s1">Â  Â  background-color: #f4c2c2;</span></p>
-<p class="p1"><span class="s1">Â  Â  text-align: center;</span></p>
-<p class="p1"><span class="s1">Â  Â  padding: 10px 0;</span></p>
-<p class="p1"><span class="s1">Â  Â  position: relative;</span></p>
-<p class="p1"><span class="s1">Â  Â  bottom: 0;</span></p>
-<p class="p1"><span class="s1">Â  Â  width: 100%;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p3"><span class="s2"></span><br></p>
-<p class="p4"><span class="s2"></span><br></p>
-<p class="p4"><span class="s2"></span><br></p>
-</body>
-</html>
+/* Style général du corps de la page */
+body {
+    background-color: #f3f4ff; /* Un doux bleu pastel pour l'arrière-plan */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Une police amusante et créative */
+    color: #333; /* Couleur de texte par défaut */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Style pour le titre principal (h1) */
+h1 {
+    color: #ff69b4; /* Un rose magique */
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Effet d'ombre subtile pour donner une sensation magique */
+    margin-top: 20px;
+}
+
+/* Style pour les sous-titres (h2) */
+h2 {
+    color: #87cefa; /* Bleu pastel doux */
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour les paragraphes */
+p {
+    color: #555; /* Gris doux pour les paragraphes */
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Effet de lumière magique autour des images */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour les sections du contenu */
+section {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc avec un peu de transparence */
+    border: 2px solid #87cefa; /* Bordure bleu pastel */
+    padding: 20px;
+    border-radius: 15px; /* Bords arrondis pour un effet doux */
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour donner du relief */
+}
+
+/* Style pour les boutons magiques */
+button {
+    background-color: #ffb6c1; /* Rose clair */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 30px; /* Forme arrondie pour donner un côté amusant et doux */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff69b4; /* Changement de couleur au survol */
+    transform: scale(1.1); /* Légère animation de zoom */
+}
+
+/* Style pour le footer (pied de page) */
+footer {
+    background-color: #87cefa; /* Fond bleu doux */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
